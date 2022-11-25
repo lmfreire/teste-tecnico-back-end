@@ -12,6 +12,5 @@ class UploadViewSet(ViewSet):
 
     def create(self, request):
         file_uploaded = request.FILES.get('file_uploaded')
-        content_type = file_uploaded.content_type
         file = parseField(file_uploaded)
         return Response(file)

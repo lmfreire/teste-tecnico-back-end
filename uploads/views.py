@@ -14,5 +14,4 @@ class UploadViewSet(ViewSet):
         file_uploaded = request.FILES.get('file_uploaded')
         content_type = file_uploaded.content_type
         file = parseField(file_uploaded)
-        response = "POST API and you have uploaded a {} file".format(content_type)
         return Response(file)

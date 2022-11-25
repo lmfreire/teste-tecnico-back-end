@@ -16,9 +16,14 @@ def parseField(field):
       "dono_da_loja": i[48:62],
       "nome_loja": i[62:81]
     }
-    # Store.objects.create(**data)
+    Store.objects.create(**data)
     listData.append(data)
   
+  result = returnFields(listData)
+  
+  return result
+
+def returnFields(listData):
   exitFiles = ["2","3","9"]
   
   storages = []
@@ -36,5 +41,7 @@ def parseField(field):
         else:
           totalValue += int(value["valor"])
           
-    result.append({i, totalValue})
+    result.append({"nome_loja": i, "valor_total": totalValue})
+    
   return result
+  

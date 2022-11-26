@@ -11,8 +11,6 @@ class UploadViewSet(ViewSet):
         return Response("GET API")
 
     def create(self, request):
-        file_uploaded = request.FILES.get('file_uploaded')
-        content_type = file_uploaded.content_type
-        file = parseField(file_uploaded)
-        response = "POST API and you have uploaded a {} file".format(content_type)
+        file_uploaded = request.data
+        file = parseField(file_uploaded["card"])
         return Response(file)

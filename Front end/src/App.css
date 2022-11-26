@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(105, 99, 99);
+}
+
+.App-header {
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  color: white;
+  border: 2px solid black;
+  width: 25rem;
+  padding: 1rem;
+}
+
+.Form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
